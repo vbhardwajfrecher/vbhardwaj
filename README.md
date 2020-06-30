@@ -1,4 +1,4 @@
-# GUI-for-Hotel
+# GUI-for-Restaurant-Billing-Software
 This is my first GUI project using python tkinter which display menu of hotel, takes order from customer and generates bill.
 Menu is present in text files in 'Menu' folder and bills will be saved in text format in 'Bill Records' folder.
 
