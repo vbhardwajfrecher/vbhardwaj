@@ -5,7 +5,7 @@ import os
 import os.path
 import time
 
-# ===================Python Variables=======================
+# =================================================Python Variables==============================================
 menu_category = ["Tea & Coffee", "Beverages", "Fast Food", "South Indian", "Starters", "Main Course", "Dessert"]
 
 menu_category_dict = {"Tea & Coffee": "1 Tea & Coffee.txt", "Beverages": "2 Beverages.txt",
@@ -20,7 +20,7 @@ for i in menu_category:
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 
-# ====================Backend Functions===========================
+# ===================================================Backend Functions==============================================
 def load_menu():
     menuCategory.set("")
     menu_tabel.delete(*menu_tabel.get_children())
@@ -272,9 +272,9 @@ def restart_window():
 
 
 # [name,rate,quantity,str(int(rate)*int(quantity)),category]
-# ==================Backend Code Ends===============
+# =================================================Backend Code Ends==================================================
 
-# ================Frontend Code Start==============
+# =================================================Frontend Code Start================================================
 root = Tk()
 w, h = root.winfo_screenwidth(), root.winfo_screenheight()
 root.geometry("%dx%d+0+0" % (w, h))
@@ -283,7 +283,7 @@ root.wm_iconbitmap("Coffee.ico")
 # root.attributes('-fullscreen', True)
 # root.resizable(0, 0)
 
-# ================Title==============
+# ======================================================Title=========================================================
 style_button = ttk.Style()
 style_button.configure("TButton", font=("arial", 10, "bold"),
                        background="darkorange")
@@ -295,7 +295,7 @@ title_label = Label(title_frame, text="GOAT !T\nPowered by D3xtroneSoftware.com"
                     font=("Helvetica", 12, "bold"), bg="darkorange", fg="white", pady=5)
 title_label.pack()
 
-# ==============Customer=============
+# ====================================================Customer==============================================================
 customer_frame = LabelFrame(root, text="Customer Details", font=("times new roman", 15, "bold"),
                             bd=8, bg="white", relief=FLAT)
 customer_frame.pack(side=TOP, fill="x")
@@ -381,9 +381,8 @@ menu_tabel.pack(fill=BOTH, expand=1)
 load_menu()
 menu_tabel.bind("<ButtonRelease-1>", load_item_from_menu)
 
-###########################################################################################
-
-# ===============Item Frame=============
+#========================================================================================================================
+# ===============================================Item Frame==============================================================
 item_frame = Frame(root, bd=8, bg="darkorange", relief=GROOVE)
 item_frame.place(x=680, y=125, height=230, width=680)
 
@@ -443,7 +442,7 @@ clear_button = ttk.Button(item_frame3, text="Clear",
                           width=8, command=clear_button_operation)
 clear_button.grid(row=0, column=3, padx=40, pady=30)
 
-# ==============Order Frame=====================
+# ===============================================Order Frame=======================================================
 order_frame = Frame(root, bd=8, bg="darkorange", relief=GROOVE)
 order_frame.place(x=680, y=335, height=370, width=680)
 
@@ -451,7 +450,7 @@ order_title_label = Label(order_frame, text="Your Order",
                           font=("times new roman", 20, "bold"), bg="darkorange", fg="white")
 order_title_label.pack(side=TOP, fill="x")
 
-# ===================== Order Tabel =====================
+# ===============================================Order Tabel========================================================
 order_tabel_frame = Frame(order_frame)
 order_tabel_frame.place(x=0, y=40, height=260, width=680)
 
@@ -484,8 +483,7 @@ scrollbar_order_y.configure(command=order_tabel.yview)
 order_tabel.pack(fill=BOTH, expand=1)
 
 # order_tabel.insert('',END,text="HEllo",values=["Masala Dosa","50","2","100"])
-###########################################################################################
-
+#==============================================================================================================================
 total_price_label = Label(order_frame, text="Total Price",
                           font=("arial", 12, "bold"), bg="darkorange", fg="blue")
 total_price_label.pack(side=LEFT, anchor=SW, padx=20, pady=10)
@@ -504,4 +502,4 @@ cancel_button = ttk.Button(order_frame, text="Cancel Order", command=cancel_butt
 cancel_button.pack(side=LEFT, anchor=SW, padx=20, pady=10)
 
 root.mainloop()
-# ====================Frontend code restart=====================
+# ======================================================Frontend code restart=====================================================
